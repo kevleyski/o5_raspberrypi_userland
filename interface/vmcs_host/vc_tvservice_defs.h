@@ -42,7 +42,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #define TVSERVICE_CLIENT_NAME MAKE_FOURCC("TVSV")
 #define TVSERVICE_NOTIFY_NAME MAKE_FOURCC("TVNT")
 
-#define TVSERVICE_MAX_CALLBACKS  2
+#define TVSERVICE_MAX_CALLBACKS  5
 
 //TV service commands
 typedef enum {
@@ -348,5 +348,10 @@ typedef struct {
    char monitor_name[EDID_DESC_ASCII_STRING_LEN+1];
    uint32_t serial_num;
 } TV_DEVICE_ID_T;
+
+// state flag for LCD attached
+enum {
+   VC_LCD_ATTACHED_DEFAULT    = (1 <<22),  /**<LCD display is attached and default */
+};
 
 #endif
