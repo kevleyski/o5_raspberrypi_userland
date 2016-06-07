@@ -31,7 +31,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #include "interface/vcos/vcos.h"
 
-#include "vchost_config.h"
+#include "vchost_platform_config.h"
 #include "vchost.h"
 
 #include "interface/vchi/vchi.h"
@@ -1593,6 +1593,7 @@ VCHPRE_ int VCHPOST_ vc_tv_hdmi_get_supported_modes(HDMI_RES_GROUP_T group,
    }
    free(supported_modes_new);
 
+   return 0;
 }
 
 /**
